@@ -7,7 +7,9 @@ var compression = require('compression');
 var helmet = require('helmet');
 
 const app = express() ;
-mongoose.connect('mongodb+srv://JalilMongoDB:orangerama1234@ramacluster.1vprk.mongodb.net/?retryWrites=true&w=majority',
+var dev_db_url = 'mongodb+srv://JalilMongoDB:orangerama1234@ramacluster.1vprk.mongodb.net/?retryWrites=true&w=majority';
+var mongoDB = process.env.MONGODB_URI || dev_db_url;
+mongoose.connect(mongoDB,
 { useNewUrlParser: true, useUnifiedTopology: true})
     .then(() => console.log('Connexion à MongoDB réussie ! '))
     .catch(() => console.log('Connexion à MongoDB échouée ! '));
