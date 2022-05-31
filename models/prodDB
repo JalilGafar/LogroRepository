@@ -1,0 +1,7 @@
+"type":"Lait",
+"nom":"Eclat d'or",
+"taille":"GM",
+"prix":{"$numberLong":"1400"},
+"disponible":true,
+"commande":{"$numberInt":"0"},
+"imageUrl":"assets/case.JPG"
